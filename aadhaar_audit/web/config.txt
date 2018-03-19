@@ -1,0 +1,13 @@
+# Define your MultiChain node credentials below.
+
+default.name=aadhaar                   # name to display in the web interface
+default.rpchost=172.26.42.139              # IP address of MultiChain node
+default.rpcport=7174                  # usually default-rpc-port from params.dat
+default.rpcuser=multichainrpc          # username for RPC from multichain.conf
+default.rpcpassword=BhLmNWykXAjESpM8wjkVczBVfRgX59izDw8DkTH9RKfo                   # password for RPC from multichain.conf
+
+# You can configure support for other nodes using a word other than 'default':
+#
+# another.name=...
+# another.rpchost=...
+# ...etc...
