@@ -1,4 +1,4 @@
-Blockchain backed Aadhaar authentication audit trail
+### Blockchain backed Aadhaar authentication audit trail
 <br/>
 There are a lot of security issues in the way Aadhaar have been implemented. With recent reports of Aadhaar information available to anyone with just Rs. 500, it's a worrying sign that the privacy of more than a billion people is at risk. As of now, there's no single trusted way as to who, when and where my aadhaar info was accessed or linked to what services. Sure, there's the Aadhaar authentication history portal by UIDAI where about past 6 months of data can be retrieved, but again it's hosted on a traditional relational DB which is controlled by an administrator and vulnerable to web risks like SQL injection. There's no guarantee that the entry has not been doctored to hide the misuse by unscruplous elements.
 <br/>
@@ -6,9 +6,8 @@ To Solve this painpoint and enhance the trust-worthiness of Aadhaar, we need to 
 <br/>
 Now, anytime a query gets made to the UIDAI website from any type of application (web, appp, chatbot etc..) or providers (telecom, banks, insurance etc..) a record gets written to the blockchain with the Aadhaar no as a one-way SHA256 hash data and the access information (app-name, date-time, ip-address and auth-type) as it's key. This guarantees data privacy yet maintaing a distributed ledger which can be queried by the user on a need basis to check his/her audit trail.
 <br/>
-Please find below further description of all the sub-folders:
-1. chatbot - AadhaarBot that fetches information about the Aadhaar no provided. This is a front facing application which acts as an intermediary to the UIDAI central DB. At the same time, a meta-data write happens to the block chain network with .
+*Please find below further description of all the sub-folders*:
 
+1. chatbot - AadhaarBot that fetches information about the Aadhaar no provided. This is a front facing application which acts as an intermediary to the UIDAI central DB. At the same time, a meta-data write happens to the block chain network with.
 2. bc - Displays the blockchain information after subscribing to a stream. Four block chain nodes have been setup locally as a VM in our computer and on running this file, it updates after a query from the chatbot and we can retrieve who, what and when that particular aadhar info got accessed.
-
 3. web - Displays the blockchain information in a web interface. Cloned from multichain-web repository and custom configured. Apache needs to be configured and appropriate ports opened for the application to retrieve the blockchain information.
