@@ -1,21 +1,21 @@
-#A program to access remote camera feed using apache kafka and find the criminals using facial recognition and update the data source with their current location and latest photo and timestamp
-##Prerequisites-
+## A program to access remote camera feed using apache kafka and find the criminals using facial recognition and update the data source with their current location and latest photo and timestamp
+### Prerequisites-
 1. Apache kafka
 2. python 2.7
 3. camera source - raspberry pi with camera/ laptop camera/ webcam 
 4. LAN connectivity
 
-##python libraries required
+### Python libraries required
 1. kafka-python
 2. numpy
 3. opencv3.3.10
 4. dlib
 5. scipy
 6. pandas
-##for raspberry pi
+#### For raspberry pi
 7. Picamera
 
-##steps for running  
+### Steps for running  
 1. Start the kafka server
 2. For new training data, update a photo of criminal into the folder images with the name of the criminal as name of the image
 3. Update the records.csv with the same name and his criminal background
